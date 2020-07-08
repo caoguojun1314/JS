@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="" method="get">
+        <div class="username">
+           <label for="username">姓名：</label>
+           <input id="username" type="text" name="username" placeholder="用户名">
+        </div>
+        <div class="password">
+          <label for="password">密码：</label>
+          <input type="password" id="password" name="password" class="password">
+        </div>
+        <div class="sex">
+          <label >性别：</label>
+          <input type="radio"  name="sex" class="sex" value="man" checked>男
+          <input type="radio"  name="sex" class="sex" value="woman">女
+        </div> 
+         <div class="sex orientation">
+          <label >性取向：</label>
+          <input type="radio"  name="sex orientation" class="sex orientation" value="man" >男
+          <input type="radio"  name="sex orientation" class="sexor ientation" value="woman" checked>女
+        </div> 
+        <div class="hobby">
+          <label >爱好：</label>
+          <input type="checkbox"  class="hobby" name="hobby" value="dota">dota
+          <input type="checkbox"  class="hobby" name="hobby" value="travel" checked>旅游
+          <input type="checkbox"  class="hobby" name="hobby" value="pet" checked>宠物
+        </div>
+        <div class="textarea">
+          <label >评论：</label>
+          <textarea name="article" id="" cols="30" rows="10">ddd</textarea>
+        </div>
+        <div class="city">
+          <label>城市</label>
+          <select name="city" >
+            <option value="beijing">北京</option>
+            <option value="shanghai" selected>上海</option>
+            <option value="nanjing" >南京</option>
+          </select>
+        </div>
+        <div class="submit">
+          <input type="submit" value="submit">
+          <input type="reset" value="reset">
+          <input type="button" value="button">
+        </div>
+      
+      <button>提交</button>
+      
+       
+      </form>
+</body>
+</html>

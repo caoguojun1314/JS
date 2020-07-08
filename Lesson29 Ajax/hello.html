@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+<body>
+    <script>
+    /*     let xhr = new XMLHttpRequest()
+        xhr.open('Get', "/hello.json",false) //同步
+        xhr.send()
+        let data = xhr.responseText
+        console.log(data) */
+        let xhr = new XMLHttpRequest()
+        xhr.open('Get', "/hello.json",true)
+        xhr.send()
+        /* xhr.onload = function(){
+            let data = xhr.responseText
+            console.log(data)
+        } */
+      /*   xhr.onreadystatechange = function(){
+            if(xhr.readyState === 4 && xhr.status === 200){
+                console.log(xhr.responseText)
+            }
+        } */
+        console.log('readyState:', xhr.readyState )
+        xhr.addEventListener('readystatechange',function(){
+            console.log('readyState:', xhr.readyState )
+        })
+        xhr.addEventListener('load',function(){
+            console.log(xhr.status)
+            if((xhr.status>=200 && xhr.status) <300 || xhr.status===304) {
+                let data = xhr.responseText
+                console.log(data)
+            }else{
+                console.log('error')
+            }
+            
+        })
+        xhr.onerror = function() {
+            console.log('error')
+        }
+     
+    </script>
+</body>
+</html>
